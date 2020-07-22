@@ -133,6 +133,9 @@ flex-basis: auto
   }
 }
 @media screen and (max-width: 574px) {
+  .container {
+    padding: 0;
+  }
   #footer {
     max-width: none;
     width: 100%;
