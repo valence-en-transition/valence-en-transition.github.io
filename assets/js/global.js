@@ -21,20 +21,29 @@ global.get = function (name) {
   $(".nav-link").removeClass("active")
   $(".nav-link[href='#p-" + name + "']").addClass("active")
 
-  console.log(".nav-link[href='#p-" + name + "']")
-  console.log($(".nav-link[href='#p-" + name + "']"))
-
   $("#pages .page").hide();
+
+  // Remove all iframe src
+  $("#pages .page iframe").each(function () {
+    $(this).attr("src", "")
+  })
 
   if ($("#pages .page-" + name).length) {
     $("#pages .page-" + name).show();
-    return;
+    $("#pages .page-" + name + " iframe").each(function () {
+      $(this).attr("src", $(this).attr("data-src"))
+    })
+
+  } else {
+    let cls = 'page-' + name;
+    $("#pages").append('<div class="page ' + cls + '"></div>');
+    $("#pages ." + cls).load("pages/" + name + ".html", function () {
+      $("#pages .page-" + name + " iframe").each(function () {
+        $(this).attr("src", $(this).attr("data-src"))
+      })
+    })
   }
 
-  let cls = 'page-' + name;
-
-  $("#pages").append('<div class="page ' + cls + '"></div>');
-  $("#pages ." + cls).load("pages/" + name + ".html");
 }
 
 global.getPage = function (page) {
