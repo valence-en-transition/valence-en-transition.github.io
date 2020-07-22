@@ -1,1 +1,22 @@
-
+/* Variables */
+@vc-primary-bg: #ECBF25;
+/* General */
+body {
+  background:@vc-primary-bg;
+}
+/* HEADER */
+#header {
+  .navbar-brand {font-weight: bold;}
+}
+/* All Pages*/
+.page {
+  min-height:400px; background:#fff; padding:15px;
+}
+/* FOOTER */
+#footer {
+  background:black; padding:20px; color:#fff;
+}
+/* Media Queries */
+@media screen and (max-width: 640px) {
+  .page {min-height: 0;}
+}
