@@ -4,14 +4,80 @@
 body {
   background:@vc-primary-bg;
 }
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+h1 {margin-top:15px;}
+.upper {text-transform: uppercase;}
+
+.container {
+  position: relative;
+}
+
+.box {  
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  width: 100%;
+  padding-bottom:60px;
+}
+
+.box .row {
+  width: 100%
+    //border: 1px dotted grey;
+}
+
+#header {
+  flex: 0 1 auto;
+  //flex: 1 100%;
+  /* The above is shorthand for:
+flex-grow: 0,
+flex-shrink: 1,
+flex-basis: auto
+  */
+  nav {width: 100%;}
+}
+
+#pages {
+  flex: 1 1 auto;
+  background: #fff;
+}
+
+#footer {
+  //flex: 0 1 40px;
+  //align-items: center;
+}
+
+
 /* HEADER */
 #header {
+  background: #fff;
   .navbar-brand {font-weight: bold;}
 }
 /* All Pages*/
 .page {
-  min-height:400px; background:#fff; padding:15px;
+  width: 100%;
+  padding:0 15px;
   .title {font-size:18px; margin-bottom:10px;}
+  &.page-accueil {
+    .title img {
+      margin-left:12px;
+    }
+    .video {
+      //margin-top:40px;
+      padding:40px 0 60px 0;
+      text-align:center;
+      display: flex wrap;
+      align-items: center;
+      justify-content: center;
+      iframe {
+        margin:15px 0;
+      }
+    }
+  }
   &.page-liens {
     ul {
       list-style:none; padding:0; margin:0;
@@ -21,7 +87,14 @@ body {
 }
 /* FOOTER */
 #footer {
-  background:black; padding:20px; color:#fff;
+  text-align: center;
+  width: 100%;
+  position: fixed; bottom:0; right: 15px;
+  justify-content: center;
+  background:#eee; line-height:60px; color:#fff;
+  .fa.fa-envelope {color:black;}
+  .fa-facebook {color:#0099FF; margin-left:20px;}
+  .fa-instagram {color:#444; margin-left:20px;}
 }
 /* Media Queries */
 @media screen and (max-width: 640px) {

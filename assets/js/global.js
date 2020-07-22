@@ -37,7 +37,7 @@ global.get = function (name) {
   } else {
     let cls = 'page-' + name;
     $("#pages").append('<div class="page ' + cls + '"></div>');
-    $("#pages ." + cls).load("pages/" + name + ".html", function () {
+    $("#pages ." + cls).load("pages/" + name + ".html?t=" + Date.now(), function () {
       $("#pages .page-" + name + " iframe").each(function () {
         $(this).attr("src", $(this).attr("data-src"))
       })
