@@ -26,8 +26,7 @@ h1 {margin-top:15px;}
 }
 
 .box .row {
-  width: 100%
-    //border: 1px dotted grey;
+  //width: 100%
 }
 
 #header {
@@ -52,6 +51,7 @@ flex-basis: auto
 }
 
 
+
 /* HEADER */
 #header {
   background: #fff;
@@ -67,15 +67,29 @@ flex-basis: auto
       margin-left:12px;
     }
     .video {
+      .videoWrapper {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 */
+        height: 0;
+        margin: 15px 0;
+      }
+      .videoWrapper iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;        
+        //max-width: 560px;
+      }
+
       //margin-top:40px;
       padding:40px 0 60px 0;
       text-align:center;
-      display: flex wrap;
-      align-items: center;
-      justify-content: center;
-      iframe {
-        margin:15px 0;
-      }
+      //display: flex wrap;
+      //align-items: center;
+      //justify-content: center;
+      max-width:500px;
+      margin: 0 auto;
     }
   }
   &.page-liens {
@@ -89,7 +103,8 @@ flex-basis: auto
 #footer {
   text-align: center;
   width: 100%;
-  position: fixed; bottom:0; right: 15px;
+  position: fixed; bottom:0; xright: 15px;
+  width:1110px;
   justify-content: center;
   background:#eee; line-height:60px; color:#fff;
   .fa.fa-envelope {color:black;}
@@ -100,6 +115,20 @@ flex-basis: auto
 @media screen and (max-width: 640px) {
   .page {
     min-height: 0;
-    iframe {max-width:100%; height: auto;}
+    //iframe {height: auto;}
   }
+}
+@media screen and (max-width: 1200px) {
+  #footer {max-width:930px;}
+}
+
+@media screen and (max-width: 990px) {
+  #footer {max-width:690px;}
+}
+
+@media screen and (max-width: 766px) {
+  #footer {max-width:510px;}
+}
+@media screen and (max-width: 574px) {
+  #footer {max-width: none; width:100%;}
 }
