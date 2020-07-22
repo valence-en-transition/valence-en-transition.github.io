@@ -1,16 +1,52 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
   <head>
-    <title>TODO supply a title</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valence en transition</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta property="og:title" content="JOJI description here" />
+    <meta name="robots" content="index,follow" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="shortcut icon" href="assets/css/images/logo.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/joji.css" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" crossorigin="anonymous"></script>
+    <script src="assets/js/mustache.js"></script>
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/vc.js"></script>
+    <!--
+    Notes : https://github.com/janl/mustache.js/blob/master/README.md
+    -->
   </head>
   <body>
-    <div>TODO write content</div>
+    <div id="header"></div>
+    <div class="container">
+      <nav><a class="page-link" href="#p-home">Accueil</a> <a class="page-link" href="#p-contact">Contact</a></nav>
+      <div id="pages"></div>
+    </div>
+    <div id="footer"></div>
+    <div style="display:none;">
+      <div id="vimeo"></div>
+      <div id="youtube"></div>
+      <div id="image"></div>
+    </div>
+    <script>
+      $('#header').load('pages/header.html');
+      $('#footer').load('pages/footer.html');
+
+      // Templates
+      $('#vimeo').load('pages/templates/vimeo.html');
+      $('#youtube').load('pages/templates/youtube.html');
+      $('#image').load('pages/templates/image.html');
+    </script>
   </body>
 </html>
