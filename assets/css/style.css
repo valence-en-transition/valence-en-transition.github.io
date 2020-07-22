@@ -61,7 +61,6 @@ flex-basis: auto
 .page.page-accueil .video {
   padding: 40px 0 60px 0;
   text-align: center;
-  max-width: 500px;
   margin: 0 auto;
 }
 .page.page-accueil .video .videoWrapper {
