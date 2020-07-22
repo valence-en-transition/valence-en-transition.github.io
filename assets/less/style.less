@@ -1,5 +1,6 @@
 /* Variables */
 @vc-primary-bg: #ECBF25;
+@vc-hover: #690F0F;
 /* General */
 body {
   background:@vc-primary-bg;
@@ -103,13 +104,25 @@ flex-basis: auto
 #footer {
   text-align: center;
   width: 100%;
-  position: fixed; bottom:0; xright: 15px;
+  position: fixed; bottom:0;
   width:1110px;
   justify-content: center;
+  .links {
+    span {
+      &:after {content:"|"; xmargin:0 10px; color:#aaa;}
+      a {
+        padding:0 10px;
+        &:hover {
+          color:@vc-hover;
+          .fa, .fab {color:@vc-hover;}
+        }
+      }
+    }
+  }
   background:#eee; line-height:60px; color:#fff;
   .fa.fa-envelope {color:black;}
-  .fa-facebook {color:#0099FF; margin-left:20px;}
-  .fa-instagram {color:#444; margin-left:20px;}
+  .fa-facebook {color:#0099FF;}
+  .fa-instagram {color:#444;}
 }
 /* Media Queries */
 @media screen and (max-width: 640px) {

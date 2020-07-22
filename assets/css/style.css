@@ -93,23 +93,35 @@ flex-basis: auto
   width: 100%;
   position: fixed;
   bottom: 0;
-  xright: 15px;
   width: 1110px;
   justify-content: center;
   background: #eee;
   line-height: 60px;
   color: #fff;
 }
+#footer .links span:after {
+  content: "|";
+  xmargin: 0 10px;
+  color: #aaa;
+}
+#footer .links span a {
+  padding: 0 10px;
+}
+#footer .links span a:hover {
+  color: #690F0F;
+}
+#footer .links span a:hover .fa,
+#footer .links span a:hover .fab {
+  color: #690F0F;
+}
 #footer .fa.fa-envelope {
   color: black;
 }
 #footer .fa-facebook {
   color: #0099FF;
-  margin-left: 20px;
 }
 #footer .fa-instagram {
   color: #444;
-  margin-left: 20px;
 }
 /* Media Queries */
 @media screen and (max-width: 640px) {
