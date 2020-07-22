@@ -13,6 +13,19 @@ body {
   background: #fff;
   padding: 15px;
 }
+.page .title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.page.page-liens ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.page.page-liens ul .info {
+  color: #888;
+  font-size: 13px;
+}
 /* FOOTER */
 #footer {
   background: black;
