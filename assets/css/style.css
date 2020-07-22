@@ -104,6 +104,9 @@ flex-basis: auto
   xmargin: 0 10px;
   color: #aaa;
 }
+#footer .links span:last-child:after {
+  content: none;
+}
 #footer .links span a {
   padding: 0 10px;
 }
