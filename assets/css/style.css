@@ -23,7 +23,6 @@ h1 {
   height: 100%;
   width: 100%;
   padding-bottom: 60px;
-  min-height: 1000px;
 }
 #header {
   flex: 0 1 auto;
@@ -39,6 +38,7 @@ flex-basis: auto
 #pages {
   flex: 1 1 auto;
   background: #fff;
+  min-height: 1500px;
 }
 /* HEADER */
 #header {
