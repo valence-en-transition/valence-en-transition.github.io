@@ -35,8 +35,12 @@
       <div id="footer"></div>
     </div>
     <script>
-      $('#header').load('pages/header.html');
-      $('#footer').load('pages/footer.html');
+      $('#header').load('pages/header.html', function() {
+        global.updateLinks("header")
+      });
+      $('#footer').load('pages/footer.html', function() {
+        global.updateLinks("footer")
+      });
     </script>
   </body>
 </html>

@@ -41,6 +41,7 @@ global.get = function (name) {
       $("#pages .page-" + name + " iframe").each(function () {
         $(this).attr("src", $(this).attr("data-src"))
       })
+      global.updateLinks(name)
     })
   }
 
@@ -60,3 +61,50 @@ global.getPage = function (page) {
   global.get(page)
 }
 
+global.updateLinks = function (name) {
+  if (global.isIOS()) {
+    if (name == 'header') {
+      global.updateLinkIOS("#header a");
+    } else if (name == 'footer') {
+      global.updateLinkIOS("#footer a");
+    } else {
+      global.updateLinkIOS("#pages .page-" + name + " a");
+    }
+  } else if (global.isAndroid()) {
+    if (name == 'header') {
+      global.updateLinkAndroid("#header a");
+    } else if (name == 'footer') {
+      global.updateLinkAndroid("#footer a");
+    } else {
+      global.updateLinkAndroid("#pages .page-" + name + " a");
+    }
+  }
+}
+global.updateLinkIOS = function (dom) {
+  $(dom).each(function () {
+    if ($(this).attr("data-ios") !== '') {
+      $(this).attr("href", $(this).attr("data-ios"));
+      $(this).attr("target", null)
+    }
+  })
+
+}
+
+global.updateLinkAndroid = function (dom) {
+  $(dom).each(function () {
+    if ($(this).attr("data-android") !== '') {
+      $(this).attr("href", $(this).attr("data-android"));
+      $(this).attr("target", null)
+    }
+  })
+
+}
+
+global.isIOS = function () {
+  return ((navigator.platform.indexOf("iPhone") != -1) || (navigator.platform.indexOf("iPod") != -1) || (navigator.platform.indexOf("iPad") != -1));
+
+};
+global.isAndroid = function () {
+  var ua = navigator.userAgent.toLowerCase();
+  return ua.indexOf("android") > -1;
+};
