@@ -76,6 +76,33 @@ flex-basis: auto
   padding: 10px;
   text-align: left;
 }
+.page.page-accueil .videos .video .info .title {
+  font-weight: bold;
+}
+.page.page-accueil .videos .video .info .more {
+  cursor: pointer;
+  color: #004085;
+  opacity: 0.7;
+  margin-top: 10px;
+}
+.page.page-accueil .videos .video .info .more:hover {
+  text-decoration: underline;
+}
+.page.page-accueil .videos .video .info .moins {
+  display: none;
+}
+.page.page-accueil .videos .video .info .text {
+  display: none;
+}
+.page.page-accueil .videos .video .info.showText .plus {
+  display: none;
+}
+.page.page-accueil .videos .video .info.showText .moins {
+  display: inline-block;
+}
+.page.page-accueil .videos .video .info.showText .text {
+  display: block;
+}
 .page.page-accueil .videos .video .info .fa-comment {
   position: relative;
   xmargin-top: -6px;

@@ -1,6 +1,7 @@
 /* Variables */
 @vc-primary-bg: #ECBF25;
 @vc-hover: #690F0F;
+@vc-link: #004085;
 /* General */
 body {
   background:@vc-primary-bg;
@@ -71,6 +72,22 @@ flex-basis: auto
         margin: 10px auto 50px auto;
         .info {
           margin-bottom:20px; padding:10px; text-align: left;
+          .title {font-weight:bold;}
+          .more {
+            cursor:pointer; color:@vc-link;
+            &:hover {text-decoration: underline;}
+            opacity:0.7;
+            //font-size:13px;
+            margin-top:10px;
+          }
+          .moins {display:none;}
+          .text {display:none;}
+          &.showText {
+            .plus {display:none;}
+            .moins {display:inline-block;}
+            .text {display:block;}
+          }
+
           .fa-comment {position: relative; xmargin-top:-6px; xcolor:@vc-primary-bg; xfont-weight:bold;}
         }
         .videoWrapper {

@@ -42,8 +42,21 @@ global.get = function (name) {
         $(this).attr("src", $(this).attr("data-src"))
       })
       global.updateLinks(name)
+      global.setMore(name)
     })
   }
+
+}
+
+global.setMore = function (name) {
+  $("#pages .page-" + name + " .more").on("click", function () {
+    let p = $(this).parent();
+    if (p.hasClass("showText")) {
+      p.removeClass("showText")
+    } else {
+      p.addClass("showText")
+    }
+  })
 
 }
 
