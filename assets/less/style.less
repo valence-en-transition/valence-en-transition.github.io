@@ -71,6 +71,17 @@ flex-basis: auto
         text-align:center;
         margin: 10px auto 50px auto;
         .info {
+          &.pic {
+            .multi-col {
+              display:flex; flex-direction:row; margin-bottom:10px;
+              .image { 
+                margin-right:15px; width:150px;
+                img {width: 100%; max-width:100%;}
+              }
+              .next-to-image {}
+            }
+          }
+
           margin-bottom:20px; padding:10px; text-align: left;
           .title {font-weight:bold;}
           .more {
@@ -160,5 +171,18 @@ flex-basis: auto
 }
 @media screen and (max-width: 574px) {
   .container {padding:0;}
+  .info {
+    &.pic {
+      .multi-col {
+        display:block !important;
+        .image {
+          display:block:important;
+          margin-right:0!important; width:100%!important;
+          margin-bottom:10px;
+        }
+        .next-to-image {}
+      }
+    }
+  }
   #footer {max-width: none; width:100%;}
 }

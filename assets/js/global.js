@@ -50,7 +50,7 @@ global.get = function (name) {
 
 global.setMore = function (name) {
   $("#pages .page-" + name + " .more").on("click", function () {
-    let p = $(this).parent();
+    let p = $(this).closest(".info");
     if (p.hasClass("showText")) {
       p.removeClass("showText")
     } else {

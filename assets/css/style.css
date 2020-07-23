@@ -76,6 +76,19 @@ flex-basis: auto
   padding: 10px;
   text-align: left;
 }
+.page.page-accueil .videos .video .info.pic .multi-col {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 10px;
+}
+.page.page-accueil .videos .video .info.pic .multi-col .image {
+  margin-right: 15px;
+  width: 150px;
+}
+.page.page-accueil .videos .video .info.pic .multi-col .image img {
+  width: 100%;
+  max-width: 100%;
+}
 .page.page-accueil .videos .video .info .title {
   font-weight: bold;
 }
@@ -197,6 +210,15 @@ flex-basis: auto
 @media screen and (max-width: 574px) {
   .container {
     padding: 0;
+  }
+  .info.pic .multi-col {
+    display: block !important;
+  }
+  .info.pic .multi-col .image {
+    display: block:important;
+    margin-right: 0!important;
+    width: 100%!important;
+    margin-bottom: 10px;
   }
   #footer {
     max-width: none;
