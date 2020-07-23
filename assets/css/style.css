@@ -76,6 +76,12 @@ flex-basis: auto
   padding: 10px;
   text-align: left;
 }
+.page.page-accueil .videos .video .info .fa-comment {
+  position: relative;
+  xmargin-top: -6px;
+  xcolor: #ECBF25;
+  xfont-weight: bold;
+}
 .page.page-accueil .videos .video .videoWrapper {
   position: relative;
   padding-bottom: 56.25%;
