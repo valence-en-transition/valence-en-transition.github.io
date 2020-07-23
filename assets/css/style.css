@@ -39,7 +39,7 @@ flex-basis: auto
 #pages {
   flex: 1 1 auto;
   background: #fff;
-  padding-bottom: 60px;
+  padding-bottom: 80px;
 }
 /* HEADER */
 #header {
@@ -60,24 +60,37 @@ flex-basis: auto
 .page.page-accueil .title img {
   margin-left: 12px;
 }
-.page.page-accueil .video {
-  padding: 40px 0 60px 0;
-  text-align: center;
-  margin: 0 auto;
+.page.page-accueil .videos {
+  margin-top: 35px;
 }
-.page.page-accueil .video .videoWrapper {
+.page.page-accueil .videos .video {
+  border: 1px solid #ECBF25;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 0;
+  text-align: center;
+  margin: 10px auto 50px auto;
+}
+.page.page-accueil .videos .video .info {
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: left;
+}
+.page.page-accueil .videos .video .videoWrapper {
   position: relative;
   padding-bottom: 56.25%;
   /* 16:9 */
   height: 0;
-  margin: 15px 0;
+  border-radius: 4px;
 }
-.page.page-accueil .video .videoWrapper iframe {
+.page.page-accueil .videos .video .videoWrapper iframe {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
+  margin: auto;
 }
 .page.page-liens ul {
   list-style: none;
