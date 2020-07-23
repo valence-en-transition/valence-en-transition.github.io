@@ -39,6 +39,7 @@ flex-basis: auto
 #pages {
   flex: 1 1 auto;
   background: #fff;
+  padding-bottom: 60px;
 }
 /* HEADER */
 #header {
