@@ -113,11 +113,21 @@ flex-basis: auto
 .page.page-accueil .videos .video .info .more:hover {
   text-decoration: underline;
 }
+.page.page-accueil .videos .video .info .more .fa {
+  position: relative;
+  top: 1px;
+}
 .page.page-accueil .videos .video .info .moins {
   display: none;
 }
 .page.page-accueil .videos .video .info .text {
   display: none;
+}
+.page.page-accueil .videos .video .info .text-inline {
+  display: none;
+}
+.page.page-accueil .videos .video .info .plus.inline {
+  margin-left: 10px;
 }
 .page.page-accueil .videos .video .info.showText .plus {
   display: none;
@@ -127,6 +137,9 @@ flex-basis: auto
 }
 .page.page-accueil .videos .video .info.showText .text {
   display: block;
+}
+.page.page-accueil .videos .video .info.showText .text-inline {
+  display: inline;
 }
 .page.page-accueil .videos .video .info .fa-comment {
   position: relative;
