@@ -69,6 +69,9 @@ flex-basis: auto
 .page.page-accueil .helloasso {
   margin-top: 25px;
 }
+.page.page-accueil .helloasso .head {
+  font-weight: bold;
+}
 .page.page-accueil .title img {
   margin-left: 12px;
 }
