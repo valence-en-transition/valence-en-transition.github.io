@@ -67,10 +67,18 @@ flex-basis: auto
   margin-bottom: 10px;
 }
 .page.page-accueil .helloasso {
+  text-align: center;
   margin-top: 25px;
 }
-.page.page-accueil .helloasso .head {
+.page.page-accueil .helloasso .inner {
+  display: inline-block;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.page.page-accueil .helloasso .inner .head {
   font-weight: bold;
+  margin-bottom: 5px;
 }
 .page.page-accueil .title img {
   margin-left: 12px;
