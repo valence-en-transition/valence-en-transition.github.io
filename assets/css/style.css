@@ -263,20 +263,27 @@ body.lang-fr .flags .fr {
   bottom: 0;
   width: 1110px;
   justify-content: center;
-  background: #eee;
+  background: #bbb;
   line-height: 60px;
   color: #fff;
 }
 #footer .links span:after {
   content: "|";
-  xmargin: 0 10px;
-  color: #aaa;
+  color: #888;
+  font-size: 20px;
 }
 #footer .links span:last-child:after {
   content: none;
 }
 #footer .links span a {
+  color: #294460;
   padding: 0 10px;
+}
+#footer .links span a .fa,
+#footer .links span a .fab {
+  position: relative;
+  top: 3px;
+  font-size: 22px;
 }
 #footer .links span a:hover {
   color: #690F0F;
@@ -286,13 +293,13 @@ body.lang-fr .flags .fr {
   color: #690F0F;
 }
 #footer .fa.fa-envelope {
-  color: black;
+  color: #294460;
 }
 #footer .fa-facebook {
-  color: #0099FF;
+  color: #294460;
 }
 #footer .fa-instagram {
-  color: #444;
+  color: #294460;
 }
 /* Media Queries */
 @media screen and (max-width: 640px) {
