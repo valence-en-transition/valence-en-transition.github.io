@@ -60,14 +60,15 @@ flex-basis: auto
   max-width: 100%;
 }
 #header .header-wrapper nav {
-  padding-top: 30px;
+  padding-top: 15px;
   width: 100%;
   position: relative;
 }
 #header .header-wrapper nav .flags {
   position: absolute;
   right: 10px;
-  top: 2px;
+  top: -10px;
+  z-index: 1;
   border: 1px solid gray;
   border-radius: 10px;
   padding: 3px 10px;
