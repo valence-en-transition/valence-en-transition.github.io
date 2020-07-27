@@ -27,7 +27,7 @@ global.setup = function () {
     lang = bits[1]
   }
   */
-  if (bits[1] && ((bits[1] == 'lang') || (bits[1] == 'lang#'))) {
+  if (bits[1] && (bits[1].substr(0, 4) == 'lang')) {
     $("body").attr("id", "")
   }
 
