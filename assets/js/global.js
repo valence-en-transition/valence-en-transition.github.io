@@ -21,6 +21,17 @@ global.setup = function () {
     lang = 'fr'
   }
 
+  var bits = window.location.href.split("?");
+  /*
+  if (bits[1] && ((bits[1] == 'en') || (bits[1] == 'fr'))) {
+    lang = bits[1]
+  }
+  */
+  if (bits[1] && ((bits[1] == 'lang'))) {
+    $("body").attr("id", "")
+  }
+
+
   $("body").addClass("lang-"+lang)
   
   global.getPage()

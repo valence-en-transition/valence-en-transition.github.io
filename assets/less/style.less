@@ -2,6 +2,13 @@
 @vc-primary-bg: #ECBF25;
 @vc-hover: #690F0F;
 @vc-link: #004085;
+#body {
+  .flags {display:none;}
+  .show-en {display:none;}
+  .showin-en {display:none;}
+  .showin-fr {display:inline;}
+  .show-fr {display:block}
+}
 /* General */
 body {
   background:@vc-primary-bg;
@@ -27,7 +34,11 @@ h1 {margin-top:15px;}
 .box .row {
   //width: 100%
 }
+/* HEADER */
 #header {
+  background: #fff;
+  .navbar-brand {font-weight: bold;}
+
   flex: 0 1 auto;
   //flex: 1 100%;
   /* The above is shorthand for:
@@ -39,10 +50,23 @@ flex-basis: auto
     width: 100%;
     .header-image {
       img {max-width:100%;}
-      margin-bottom:40px;
+      //margin-bottom:0px;
     }
-    //width:100%; background:url("assets/images/anvcop21-banner.png") no-repeat; background-size: cover; background-position: center;
-    nav {width: 100%;}
+    nav {
+      padding-top:30px;
+      width: 100%;
+      position: relative;
+      .flags {
+        position: absolute; right:10px; top:2px;
+        border:1px solid gray; border-radius:10px;
+        padding:3px 10px;
+        a {
+          display:inline-block;
+          margin-right:5px;
+          &:last-child {margin-right:0;}
+        }
+      }
+    }
   }
 }
 #pages {
@@ -55,17 +79,29 @@ flex-basis: auto
   //flex: 0 1 40px;
   //align-items: center;
 }
-/* HEADER */
-#header {
-  background: #fff;
-  .navbar-brand {font-weight: bold;}
+.show-en {display:none;}
+.showin-en {display:none;}
+
+body.lang-en {
+  .showin-fr {display:none}
+  .show-fr {display:none}
+  .showin-en {display:inline;}
+  .show-en {display:block}
 }
+
 /* All Pages*/
 .page {
   width: 100%;
   padding:0 15px;
   .title {font-size:18px; margin-bottom:10px;}
   &.page-accueil {
+    .intro {
+      margin:20px 0;
+      text-align:left;
+      max-width:800px;
+      border-top:1px solid #ccc; border-bottom:1px solid #ccc;
+      padding:10px 0;
+    }
     .helloasso {
       text-align:center;
       .inner {
@@ -102,26 +138,6 @@ flex-basis: auto
           }
           margin-bottom:20px; padding:10px; text-align: left;
           .title {font-weight:bold;}
-          .more {
-            cursor:pointer; color:@vc-link;
-            &:hover {text-decoration: underline;}
-            opacity:0.7;
-            //font-size:13px;
-            margin-top:10px;
-            .fa {position: relative; top:1px;}
-          }
-          .moins {display:none;}
-          .text {display:none;}
-          .text-inline {display:none;}
-          .plus.inline {
-            margin-left:10px;
-          }
-          &.showText {
-            .plus {display:none;}
-            .moins {display:inline-block;}
-            .text {display:block;}
-            .text-inline {display:inline;}
-          }
           .fa-comment {position: relative; xmargin-top:-6px; xcolor:@vc-primary-bg; xfont-weight:bold;}
         }
         .videoWrapper {
@@ -150,6 +166,27 @@ flex-basis: auto
       .info {color:#888; font-size:13px;}
     }
   }
+  .more {
+    cursor:pointer; color:@vc-link;
+    &:hover {text-decoration: underline;}
+    opacity:0.7;
+    //font-size:13px;
+    margin-top:10px;
+    .fa {position: relative; top:1px;}
+  }
+  .moins {display:none;}
+  .text {display:none;}
+  .text-inline {display:none;}
+  .plus.inline {
+    margin-left:10px;
+  }
+  .showText {
+    .plus {display:none;}
+    .moins {display:inline-block;}
+    .text {display:block;}
+    .text-inline {display:inline;}
+  }
+
 }
 /* FOOTER */
 #footer {
