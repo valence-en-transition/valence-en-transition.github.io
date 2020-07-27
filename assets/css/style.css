@@ -94,6 +94,10 @@ flex-basis: auto
 .flags .fr {
   opacity: 0.5;
 }
+.flags .en:hover,
+.flags .fr:hover {
+  opacity: 1;
+}
 body.lang-en .flags .en {
   opacity: 1;
 }

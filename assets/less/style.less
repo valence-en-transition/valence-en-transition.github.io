@@ -83,7 +83,10 @@ flex-basis: auto
 .showin-en {display:none;}
 
 .flags {
-  .en, .fr {opacity:0.5;}
+  .en, .fr {
+    opacity:0.5;
+    &:hover {opacity:1;}
+  }
 }
 body {
   &.lang-en {
