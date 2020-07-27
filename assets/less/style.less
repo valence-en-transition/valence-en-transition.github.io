@@ -82,13 +82,21 @@ flex-basis: auto
 .show-en {display:none;}
 .showin-en {display:none;}
 
-body.lang-en {
-  .showin-fr {display:none}
-  .show-fr {display:none}
-  .showin-en {display:inline;}
-  .show-en {display:block}
+.flags {
+  .en, .fr {opacity:0.5;}
 }
-
+body {
+  &.lang-en {
+    .flags .en {opacity:1;}
+    .showin-fr {display:none}
+    .show-fr {display:none}
+    .showin-en {display:inline;}
+    .show-en {display:block}
+  }
+  &.lang-fr {
+    .flags .fr {opacity:1;}
+  }
+}
 /* All Pages*/
 .page {
   width: 100%;

@@ -90,6 +90,13 @@ flex-basis: auto
 .showin-en {
   display: none;
 }
+.flags .en,
+.flags .fr {
+  opacity: 0.5;
+}
+body.lang-en .flags .en {
+  opacity: 1;
+}
 body.lang-en .showin-fr {
   display: none;
 }
@@ -101,6 +108,9 @@ body.lang-en .showin-en {
 }
 body.lang-en .show-en {
   display: block;
+}
+body.lang-fr .flags .fr {
+  opacity: 1;
 }
 /* All Pages*/
 .page {
