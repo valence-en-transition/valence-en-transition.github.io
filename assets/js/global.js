@@ -11,6 +11,18 @@ jQuery(document).ready(function ($) {
 });
 
 global.setup = function () {
+  let lang = $.cookie('lang')
+  if (!lang) {
+    var userLang = navigator.language || navigator.userLanguage;
+    lang = userLang.split('-')[0]
+  }
+  lang = lang.toLowerCase()
+  if (lang!='en') {
+    lang = 'fr'
+  }
+
+  $("body").addClass("lang-"+lang)
+  
   global.getPage()
   $(".nav-link").on("click", function () {
     global.getPage($(this).attr("href").substr(3))
@@ -43,9 +55,25 @@ global.get = function (name) {
       })
       global.updateLinks(name)
       global.setMore(name)
+      global.flags()
     })
   }
 
+}
+
+global.flags = function() {
+    $(".flags .item").unbind().on("click", function() {
+        let lang = "fr"
+        if ($(this).hasClass("en")) {
+            $("body").removeClass("lang-fr")
+            $("body").addClass("lang-en")
+            lang = "en"
+        } else {
+            $("body").removeClass("lang-en")
+            $("body").addClass("lang-fr")
+        }
+        $.cookie('lang', lang);
+    })
 }
 
 global.setMore = function (name) {
