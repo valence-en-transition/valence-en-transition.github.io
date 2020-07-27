@@ -73,7 +73,8 @@ global.get = function (name) {
 }
 
 global.flags = function() {
-    $(".flags .item").unbind().on("click", function() {
+  $(".flags .item").unbind().on("click", function () {
+    $(".showText").removeClass("showText")
         let lang = "fr"
         if ($(this).hasClass("en")) {
             $("body").removeClass("lang-fr")
