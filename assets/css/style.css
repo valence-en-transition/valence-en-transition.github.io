@@ -125,6 +125,11 @@ body.lang-fr .flags .fr {
   font-size: 18px;
   margin-bottom: 10px;
 }
+.page.page-accueil .testimony {
+  padding-left: 30px;
+  color: #999;
+  font-weight: normal;
+}
 .page.page-accueil .intro {
   margin: 20px 0;
   text-align: left;
