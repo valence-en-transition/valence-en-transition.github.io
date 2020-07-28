@@ -21,6 +21,12 @@ global.setup = function () {
     lang = 'fr'
   }
 
+  if (lang == 'fr') {
+    $("html head title").html("Décrochons Macron - Procès à Valence")
+  } else {
+    $("html head title").html("Let's take down Macron - Trial in Valence")
+  }
+
   var bits = window.location.href.split("?");
   /*
   if (bits[1] && ((bits[1] == 'en') || (bits[1] == 'fr'))) {
@@ -72,20 +78,25 @@ global.get = function (name) {
 
 }
 
-global.flags = function() {
+global.flags = function () {
   $(".flags .item").unbind().on("click", function () {
     $(".showText").removeClass("showText")
-        let lang = "fr"
-        if ($(this).hasClass("en")) {
-            $("body").removeClass("lang-fr")
-            $("body").addClass("lang-en")
-            lang = "en"
-        } else {
-            $("body").removeClass("lang-en")
-            $("body").addClass("lang-fr")
-        }
-        $.cookie('lang', lang);
-    })
+    let lang = "fr"
+    if ($(this).hasClass("en")) {
+      $("body").removeClass("lang-fr")
+      $("body").addClass("lang-en")
+      lang = "en"
+    } else {
+      $("body").removeClass("lang-en")
+      $("body").addClass("lang-fr")
+    }
+    $.cookie('lang', lang);
+    if (lang == 'fr') {
+      $("html head title").html("Décrochons Macron - Procès à Valence")
+    } else {
+      $("html head title").html("Let's take down Macron - Trial in Valence")
+    }
+  })
 }
 
 global.setMore = function (name) {
