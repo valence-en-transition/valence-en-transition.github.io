@@ -187,6 +187,12 @@ body.lang-fr .flags .fr {
 }
 .page.page-accueil .videos .video .info .title {
   font-weight: bold;
+  position: relative;
+}
+.page.page-accueil .videos .video .info .title .testimony {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 .page.page-accueil .videos .video .info .fa-comment {
   position: relative;
