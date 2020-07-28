@@ -1,17 +1,17 @@
 /* Variables */
-#body .flags {
+x#body .flags {
   display: none;
 }
-#body .show-en {
+x#body .show-en {
   display: none;
 }
-#body .showin-en {
+x#body .showin-en {
   display: none;
 }
-#body .showin-fr {
+x#body .showin-fr {
   display: inline;
 }
-#body .show-fr {
+x#body .show-fr {
   display: block;
 }
 /* General */
