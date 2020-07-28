@@ -156,6 +156,9 @@ body.lang-fr .flags .fr {
 .page.page-accueil .title img {
   margin-left: 12px;
 }
+.page.page-accueil .donate .fa-heart {
+  margin-right: 10px;
+}
 .page.page-accueil .videos {
   margin-top: 35px;
 }
