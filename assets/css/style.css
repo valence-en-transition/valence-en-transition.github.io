@@ -146,6 +146,9 @@ body.lang-fr .flags .fr {
   color: #690F0F;
   padding-top: 20px;
 }
+.page.page-accueil .program-link {
+  font-size: 20px;
+}
 .page.page-accueil .indent {
   padding-left: 20px;
   border-left: 2px solid #bbb;
