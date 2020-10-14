@@ -10,6 +10,8 @@ jQuery(document).ready(function ($) {
   global.setup();
 });
 
+global.gotoAnchor = null;
+
 global.setup = function () {
   let lang = $.cookie('lang')
   if (!lang) {
@@ -41,7 +43,11 @@ global.setup = function () {
   $("body").addClass("lang-"+lang)
   
   global.getPage()
-  $(".nav-link").on("click", function () {
+  $(".nav-link.click").on("click", function () {
+    let href = $(this).attr("href");
+    if ((href === '#NOOP') || (href === 'javascript:void(0);')) {
+      return;
+    }
     global.getPage($(this).attr("href").substr(3))
   })
 }
@@ -76,6 +82,16 @@ global.get = function (name) {
     })
   }
 
+  if (global.gotoAnchor) {
+    console.log("goto " + "#" + global.gotoAnchor)
+    if ($("#" + global.gotoAnchor).length) {
+      setTimeout(function () {
+        $('html, body').animate({
+          scrollTop: $("#" + global.gotoAnchor).offset().top
+        }, 2000);
+      }, 200)
+    }
+  }
 }
 
 global.flags = function () {
@@ -112,6 +128,7 @@ global.setMore = function (name) {
 }
 
 global.getPage = function (page) {
+  global.gotoAnchor = null;
   if ((typeof (page) == "undefined") || (page === "")) {
     var hash = window.location.hash.substr(1);
     page = "";
@@ -121,7 +138,17 @@ global.getPage = function (page) {
     if (page == "") {
       page = "accueil";
     }
+    if (hash == "NOOP") {
+      return;
+    }
   }
+
+  let bits = page.split("/");
+  page = bits[0];
+  if (bits[1]) {
+    global.gotoAnchor = bits[1];
+  }
+  //window.history.pushState('page' + page, 'Title', "#p-" + page);
   global.get(page)
 }
 

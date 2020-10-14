@@ -1,19 +1,4 @@
 /* Variables */
-x#body .flags {
-  display: none;
-}
-x#body .show-en {
-  display: none;
-}
-x#body .showin-en {
-  display: none;
-}
-x#body .showin-fr {
-  display: inline;
-}
-x#body .show-fr {
-  display: block;
-}
 /* General */
 body {
   background: #ECBF25;
@@ -65,10 +50,7 @@ flex-basis: auto
   position: relative;
 }
 #header .header-wrapper nav .flags {
-  position: absolute;
-  right: 10px;
-  top: -10px;
-  z-index: 1;
+  /*position: absolute; right:10px; top:-10px; z-index:1;*/
   border: 1px solid gray;
   border-radius: 10px;
   padding: 3px 10px;
@@ -356,6 +338,11 @@ body.lang-fr .flags .fr {
   }
   #footer {
     max-width: 690px;
+  }
+  #header .header-wrapper nav .flags {
+    margin-top: 20px;
+    border: none;
+    padding:0;
   }
 }
 @media screen and (max-width: 766px) {
