@@ -104,6 +104,9 @@ body.lang-fr .flags .fr {
   width: 100%;
   padding: 0 15px;
 }
+.page img {
+  max-width: 100%;
+}
 .page .title {
   font-size: 18px;
   margin-bottom: 10px;
@@ -342,7 +345,6 @@ body.lang-fr .flags .fr {
   #header .header-wrapper nav .flags {
     margin-top: 20px;
     border: none;
-    padding:0;
   }
 }
 @media screen and (max-width: 766px) {

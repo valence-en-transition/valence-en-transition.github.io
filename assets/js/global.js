@@ -48,6 +48,8 @@ global.setup = function () {
     if ((href === '#NOOP') || (href === 'javascript:void(0);')) {
       return;
     }
+    $('.navbar-collapse').collapse('hide');
+
     global.getPage($(this).attr("href").substr(3))
   })
 }
