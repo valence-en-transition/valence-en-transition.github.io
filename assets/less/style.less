@@ -31,6 +31,7 @@ h1 {margin-top:15px;}
 #header {
   background: #fff;
   .navbar-brand {font-weight: bold;}
+  .navbar.bg-light {background:#eee !important;}
 
   flex: 0 1 auto;
   //flex: 1 100%;
@@ -95,8 +96,11 @@ body {
   width: 100%;
   padding:0 15px;
   .title {font-size:18px; margin-bottom:10px;}
+  h3.header {margin:5px 0; color:@vc-hover; /*border-bottom:1px solid @vc-hover;*/}
+
   &.page-program {
     h3 {margin:40px 0; color:@vc-hover;}
+    h3.header {margin:5px 0;}
     table {
       margin-bottom:40px;
       td {font-size:19px;vertical-align:top;}
@@ -119,14 +123,13 @@ body {
       text-align:center;
       .inner {
         display:inline-block;
-        padding:10px; border:1px solid #ccc; border-radius:4px;
+        padding:10px; border:2px solid @vc-hover; border-radius:4px;
         .head {font-weight: bold; margin-bottom:5px;}
       }
-
-      margin-top:25px;
-
+      //margin-top:25px;
     }
-    .title img {
+      .title {color:@vc-hover;}
+      .title img {
       margin-left:12px;
     }
     .donate {
@@ -237,6 +240,7 @@ body {
 
 /* Media Queries */
 @media screen and (max-width: 640px) {
+  /*table td {width:100%; display:block;}*/
   .page {
     min-height: 0;
     //iframe {height: auto;}

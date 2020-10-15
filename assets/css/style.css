@@ -38,6 +38,9 @@ flex-basis: auto
 #header .navbar-brand {
   font-weight: bold;
 }
+#header .navbar.bg-light {
+  background: #eee !important;
+}
 #header .header-wrapper {
   width: 100%;
 }
@@ -111,9 +114,17 @@ body.lang-fr .flags .fr {
   font-size: 18px;
   margin-bottom: 10px;
 }
+.page h3.header {
+  margin: 5px 0;
+  color: #690F0F;
+  /*border-bottom:1px solid @vc-hover;*/
+}
 .page.page-program h3 {
   margin: 40px 0;
   color: #690F0F;
+}
+.page.page-program h3.header {
+  margin: 5px 0;
 }
 .page.page-program table {
   margin-bottom: 40px;
@@ -154,17 +165,19 @@ body.lang-fr .flags .fr {
 }
 .page.page-accueil .helloasso {
   text-align: center;
-  margin-top: 25px;
 }
 .page.page-accueil .helloasso .inner {
   display: inline-block;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 2px solid #690F0F;
   border-radius: 4px;
 }
 .page.page-accueil .helloasso .inner .head {
   font-weight: bold;
   margin-bottom: 5px;
+}
+.page.page-accueil .title {
+  color: #690F0F;
 }
 .page.page-accueil .title img {
   margin-left: 12px;
@@ -326,6 +339,7 @@ body.lang-fr .flags .fr {
 }
 /* Media Queries */
 @media screen and (max-width: 640px) {
+  /*table td {width:100%; display:block;}*/
   .page {
     min-height: 0;
   }
