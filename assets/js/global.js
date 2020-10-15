@@ -44,11 +44,14 @@ global.setup = function () {
   
   global.getPage()
   $(".nav-link.click").on("click", function () {
+    console.log("clicked");
+    $('.navbar-collapse').collapse('hide');
+    console.log("Hide menu")
+
     let href = $(this).attr("href");
     if ((href === '#NOOP') || (href === 'javascript:void(0);')) {
       return;
     }
-    $('.navbar-collapse').collapse('hide');
 
     global.getPage($(this).attr("href").substr(3))
   })
