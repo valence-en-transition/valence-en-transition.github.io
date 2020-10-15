@@ -1,4 +1,23 @@
 /* Variables */
+/* Additional slideshow css */
+[class*="slideshow"] {
+  max-width: 600px;
+  height: 450px;
+  margin: 0 auto 40px;
+  outline: none;
+}
+[class*="slideshow"] img {
+  display: none;
+}
+[class*="slideshow"] .image_wrapper .text_content {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  color: #fff;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  margin: 0.1em 0;
+}
 /* General */
 body {
   background: #ECBF25;

@@ -44,10 +44,7 @@ global.setup = function () {
   
   global.getPage()
   $(".nav-link.click").on("click", function () {
-    console.log("clicked");
     $('.navbar-collapse').collapse('hide');
-    console.log("Hide menu")
-
     let href = $(this).attr("href");
     if ((href === '#NOOP') || (href === 'javascript:void(0);')) {
       return;
@@ -55,6 +52,34 @@ global.setup = function () {
 
     global.getPage($(this).attr("href").substr(3))
   })
+}
+
+global.slideshow = function (name) {
+  if (name !== 'slideshow') {
+    return;
+  }
+  if ($(".run-slideshow").hasClass("square1")) {
+    // No need to reload it
+    return;
+  }
+  //setTimeout(function () {
+    $('.run-slideshow').square1({animation: 'slide'});
+  //}, 200);
+}
+
+global.scrollToAnchor = function () {
+  if (!global.gotoAnchor) {
+    return;
+  }
+  if ($("#" + global.gotoAnchor).length == 0) {
+    return;
+  }
+
+  //setTimeout(function () {
+        $('html, body').animate({
+          scrollTop: $("#" + global.gotoAnchor).offset().top
+        }, 2000);
+  //}, 200)
 }
 
 global.get = function (name) {
@@ -73,7 +98,7 @@ global.get = function (name) {
     $("#pages .page-" + name + " iframe").each(function () {
       $(this).attr("src", $(this).attr("data-src"))
     })
-
+    global.scrollToAnchor();
   } else {
     let cls = 'page-' + name;
     $("#pages").append('<div class="page ' + cls + '"></div>');
@@ -84,19 +109,11 @@ global.get = function (name) {
       global.updateLinks(name)
       global.setMore(name)
       global.flags()
+      global.slideshow(name)
+      global.scrollToAnchor();
     })
   }
 
-  if (global.gotoAnchor) {
-    console.log("goto " + "#" + global.gotoAnchor)
-    if ($("#" + global.gotoAnchor).length) {
-      setTimeout(function () {
-        $('html, body').animate({
-          scrollTop: $("#" + global.gotoAnchor).offset().top
-        }, 2000);
-      }, 200)
-    }
-  }
 }
 
 global.flags = function () {
