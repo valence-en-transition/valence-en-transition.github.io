@@ -133,6 +133,8 @@ global.setMore = function (name) {
 }
 
 global.getPage = function (page) {
+  $('.navbar-collapse').collapse('hide');
+
   global.gotoAnchor = null;
   if ((typeof (page) == "undefined") || (page === "")) {
     var hash = window.location.hash.substr(1);
