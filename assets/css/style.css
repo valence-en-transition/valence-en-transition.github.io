@@ -273,6 +273,16 @@ body.lang-fr .flags .fr {
   color: #888;
   font-size: 13px;
 }
+.page.page-art .title {
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #000;
+}
+.page.page-art .info {
+  text-align: left;
+  color: #777;
+  margin-top: 20px;
+}
 .page .more {
   cursor: pointer;
   color: #004085;
