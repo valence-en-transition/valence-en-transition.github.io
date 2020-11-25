@@ -55,7 +55,7 @@ global.setup = function () {
 }
 
 global.slideshow = function (name) {
-  if (name !== 'slideshow') {
+  if (name !== 'diaporama') {
     return;
   }
   if ($(".run-slideshow").hasClass("square1")) {
@@ -134,6 +134,7 @@ global.flags = function () {
     } else {
       $("html head title").html("Let's take down Macron - Trial in Valence")
     }
+    $('.navbar-collapse').collapse('hide');
   })
 }
 
